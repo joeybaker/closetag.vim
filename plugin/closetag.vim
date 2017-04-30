@@ -159,7 +159,7 @@ function! GetLastOpenTag(unaryTagsStack)
   let b:TagStack=""    " main stack of tags
   let startInComment=s:InComment()
 
-  let tagpat='</\=\(\k\|[-:]\)\+\|/>'
+  let tagpat='</\=\(\k\|[-:.]\)\+\|/>'
   " Search for: closing tags </tag, opening tags <tag, and unary tag ends />
   while (linenum>0)
     " Every time we see an end-tag, we push it on the stack.  When we see an
